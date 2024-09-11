@@ -1,8 +1,12 @@
 Head First Design Patterns for PHP 5
 ====================================
 
-Version 1.0.0, released 7/28/2009
+Version 2.0.0, released 9/10/2024
 ---------------------------------
+
+### Updates
+
+- Now supports PHP 8.
 
 By Wren Weburg <wren@weburg.com>  
 http://www.weburg.com/hfdp
@@ -46,9 +50,9 @@ If you have any questions or feedback, I'd love to hear from you!
 
 ### Requirements
 
-- PHP 5.2 or better
+- PHP 5.2 or better for version 1.0.0, PHP 8 or better for version 2.0.0
 	- Sockets extension enabled for running Proxy Pattern
-- Windows (tested with Server 2000), Linux (tested with Ubuntu 8.10), Mac OS X
+- Windows (tested with Server 2000, 10), Linux (tested with Ubuntu 8.10, 22.04), Mac OS X
   (tested with 10.5.7)
 - Web server to run MVC example (tested with Apache HTTP Server 2 and IIS 5)
 
@@ -341,7 +345,7 @@ All code is in the public domain for your use / education / enjoyment. Though,
 if you use any of the code in your projects or want to redistribute it, I'd just
 want to hear from you and/or receive a credit somewhere is about all. Thanks!
 
-### Versions
+### Prior Versions
 
 1.0.0 : 7/28/2009
 	- Initial release

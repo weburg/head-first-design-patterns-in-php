@@ -5,7 +5,7 @@ class PizzaStore {
 	 */
 	private $factory;
 	
-	public function PizzaStore(SimplePizzaFactory $factory) {
+	public function __construct(SimplePizzaFactory $factory) {
 		$this->factory = $factory;
 	}
 	

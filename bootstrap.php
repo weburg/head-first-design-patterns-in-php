@@ -21,9 +21,9 @@ if (isset($_SERVER["argv"])) {
  * Mimic all classes being in the same Java package by autoloading classes in
  * the same directory
  */
-function __autoload($className) {
-	require_once $className . ".php";
-}
+spl_autoload_register(function ($className) {
+    require_once $className . ".php";
+});
 
 /*
  * Mimic Java's println()
