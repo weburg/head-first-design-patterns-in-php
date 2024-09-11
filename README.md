@@ -24,7 +24,7 @@ Table of Contents
 
 ### Introduction
 
-First let me say that [_Head First Design Patterns_](http://amzn.com/0596007124)
+First let me say that [_Head First Design Patterns_](https://www.oreilly.com/library/view/head-first-design/9781492077992/)
 is a fantastic book serving as a solid and easy to understand introduction into
 Design Patterns. I am a much more in tune with the appropriate use of patterns
 because of the efforts of its authors. To help further my understanding of the
@@ -129,12 +129,8 @@ is unfortunately sensitive to where the script is ran from).
 With an IDE...
 
 Or, if you'd like to have a better view of the code, you can run the examples
-from Eclipse. I like using the Eclipse PDT plugin, and just run the PHP scripts
-inside the IDE. You can then watch the debug output to see the example's print
-statements. I'll leave the setup of Eclipse PDT to the Eclipse site
-(www.eclipse.org/pdt). But if you follow this option, you'd want to make sure
-to install the Zend Debugger which lets you run PHP scripts directly on your
-Eclipse machine.
+from an IDE like PhpStorm or Eclipse. You can then watch the debug output to see the example's print
+statements. It's suggested to ensure Xdebug is installed if you plan to do any debugging.
 
 ### How to Run the MVC Example
 
@@ -218,7 +214,7 @@ directory or symlink to pull the public directory into an existing site.
 
 ##### Starbuzz
 
-- PHP5 doesn't let you convert a concrete method into an abstract one when
+- PHP doesn't let you convert a concrete method into an abstract one when
   using inheritance. Java allows this though.
 
 #### Facade Pattern - Chapter 7
@@ -252,7 +248,7 @@ directory or symlink to pull the public directory into an existing site.
 
 ##### Weather
 
-- PHP5 seems to have own Subject and Observer classes, renamed them to avoid
+- PHP seems to have own Subject and Observer classes, renamed them to avoid
   any collisions. In the future, with PHP 5.3, namespaces can be used to
   keep them separate.
 - Had to rewrite list of observers array usage; PHP arrays work different
@@ -278,7 +274,7 @@ directory or symlink to pull the public directory into an existing site.
 
 #### Singleton Pattern - Chapter 5
 
-- Singleton isn't too difficult to implement. PHP5 can implement singletons
+- Singleton isn't too difficult to implement. PHP can implement singletons
   very similarly to Java. Avoid the trap of trying to make a Singleton
   reusable class. Maybe create an interface for it instead.
 - In PHP, make sure to disable the use of a class's __clone() method to
@@ -286,16 +282,16 @@ directory or symlink to pull the public directory into an existing site.
 
 ##### Double-Checked Locking & Threadsafe
 
-- PHP5 doesn't natively support synchronized blocks, and so these examples
+- PHP doesn't natively support synchronized blocks, and so these examples
   are not easily ported to PHP. It doesn't matter anyway since PHP doesn't
   directly support threads, so synchronization isn't important for ensuring
   singletons work as expected within the same request.
 
 ##### Static (eagerly created instance)
 
-- PHP5 cannot have expressions like new objects instantiated in member
+- PHP cannot have expressions like new objects instantiated in member
   variables. Since the constructor is the only place to initialize such
-  members, this Singleton pattern cannot be used in PHP5 (current version).
+  members, this Singleton pattern cannot be used in PHP (at least as of 5.3).
   Classic Singleton should be used instead.
 
 ##### Subclass
