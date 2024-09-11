@@ -1,5 +1,5 @@
-Head First Design Patterns for PHP 5
-====================================
+Head First Design Patterns for PHP
+==================================
 
 Version 2.0.0, released 9/10/2024
 ---------------------------------
