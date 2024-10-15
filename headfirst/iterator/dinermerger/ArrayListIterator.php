@@ -1,7 +1,7 @@
 <?php
 require_once "java/ArrayList.php";
 
-class ArrayListIterator implements My2Iterator {
+class ArrayListIterator implements com\weburg\Iterator {
     /**
      * @var ArrayList
      */

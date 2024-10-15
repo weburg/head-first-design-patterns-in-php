@@ -14,7 +14,7 @@ class Waitress {
         $this->dinerMenu = $dinerMenu;
     }
 
-    public function printMenu(My2Iterator $iterator = NULL) {
+    public function printMenu(com\weburg\Iterator $iterator = NULL) {
         if ($iterator == NULL) {
             $pancakeIterator = $this->pancakeHouseMenu->createIterator();
             $dinerIterator = $this->dinerMenu->createIterator();
@@ -45,7 +45,7 @@ class Waitress {
         return FALSE;
     }
 
-    private function printVegetarianMenu(My2Iterator $iterator = NULL) {
+    private function printVegetarianMenu(Iterator $iterator = NULL) {
         if ($iterator == NULL) {
             printVegetarianMenu($this->pancakeHouseMenu->createIterator());
             printVegetarianMenu($this->dinerMenu->createIterator());
@@ -61,7 +61,7 @@ class Waitress {
         }
     }
 
-    private function isVegetarian($name, My2Iterator $iterator) {
+    private function isVegetarian($name, Iterator $iterator) {
         while ($iterator->hasNext()) {
             $menuItem = $iterator->next();
             if ($menuItem->getName() == $name) {

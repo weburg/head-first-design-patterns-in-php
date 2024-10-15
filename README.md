@@ -30,7 +30,7 @@ If you have any questions or feedback, I'd love to hear from you!
 
 ### Requirements
 
-- PHP 5.2 or better for version 1.0.0, PHP 8 or better for version 2.0.0
+- PHP 5.2 or better for version 1.0.0, PHP 8 or better for version 2.0.0+
     - Sockets extension enabled for running Proxy Pattern
 - Windows (tested with Server 2000, 10), Linux (tested with Ubuntu 8.10, 22.04), Mac OS X
   (tested with 10.5.7)
@@ -221,8 +221,8 @@ directory or symlink to pull the public directory into an existing site.
 
 - The code does not use the AlternatingDinerMenuIterator, ArrayIterator, or
   ArrayListIterator classes directly.
-- Prior to PHP 5.3, namespaces aren't supported, so classes have to be named
-  uniquely to avoid PHP "cannot redeclare class" errors.
+- Namespaced the Iterator class, since PHP already has an Iterator class that
+  conflicts and throws an error otherwise.
 
 #### Observer Pattern - Chapter 2
 

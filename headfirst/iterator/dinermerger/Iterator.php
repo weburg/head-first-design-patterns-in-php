@@ -1,5 +1,7 @@
 <?php
-interface My2Iterator {
+namespace com\weburg;
+
+interface Iterator {
     public function hasNext();
     public function next();
 }

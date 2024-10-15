@@ -1,7 +1,7 @@
 <?php
 require_once "java/ArrayList.php";
 
-class PancakeHouseMenuIterator implements My2Iterator {
+class PancakeHouseMenuIterator implements com\weburg\Iterator {
     /**
      * @var ArrayList
      */
