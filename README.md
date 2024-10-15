@@ -8,8 +8,6 @@
 * How to Run the Command Line Examples
 * How to Run the MVC Example
 * Special Notes by Pattern
-* License
-* Versions
 
 ### Introduction
 
