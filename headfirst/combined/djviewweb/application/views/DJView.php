@@ -12,7 +12,7 @@ Beats per minute = <?php echo $beatModel->BPM ?>
 
 <form method="post" action="index.php?controller=DJView&action=change">
 BPM: <input type=text name="bpm"
-			value="<?php echo $beatModel->BPM ?>">
+            value="<?php echo $beatModel->BPM ?>">
 &nbsp;
 
 <input type="submit" name="set" value="set"><br />

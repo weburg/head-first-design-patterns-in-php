@@ -1,5 +1,5 @@
 <?php
 interface DisplayElement {
-	public function display();
+    public function display();
 }
 ?>

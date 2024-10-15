@@ -1,28 +1,28 @@
 <?php
 abstract class CaffeineBeverageWithHook {
-	public function prepareRecipe() {
-		$this->boilWater();
-		$this->brew();
-		$this->pourInCup();
-		if ($this->customerWantsCondiments()) {
-			$this->addCondiments();
-		}
-	}
+    public function prepareRecipe() {
+        $this->boilWater();
+        $this->brew();
+        $this->pourInCup();
+        if ($this->customerWantsCondiments()) {
+            $this->addCondiments();
+        }
+    }
 
-	abstract protected function brew();
+    abstract protected function brew();
 
-	abstract protected function addCondiments();
+    abstract protected function addCondiments();
 
-	protected function boilWater() {
-		println("Boiling water");
-	}
+    protected function boilWater() {
+        println("Boiling water");
+    }
 
-	protected function pourInCup() {
-		println("Pouring into cup");
-	}
+    protected function pourInCup() {
+        println("Pouring into cup");
+    }
 
-	protected function customerWantsCondiments() {
-		return true;
-	}
+    protected function customerWantsCondiments() {
+        return true;
+    }
 }
 ?>

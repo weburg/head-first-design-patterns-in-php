@@ -1,5 +1,5 @@
 <?php
 interface Pepperoni {
-	public function __toString();
+    public function __toString();
 }
 ?>

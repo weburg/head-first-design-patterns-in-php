@@ -1,21 +1,21 @@
 <?php
 class Screen {
-	protected $description;
-	
-	public function __construct($description) {
-		$this->description = $description;
-	}
+    protected $description;
 
-	public function up() {
-		println($this->description . " going up");
-	}
+    public function __construct($description) {
+        $this->description = $description;
+    }
 
-	public function down() {
-		println($this->description . " going down");
-	}
+    public function up() {
+        println($this->description . " going up");
+    }
 
-	public function __toString() {
-		return $this->description;
-	}
+    public function down() {
+        println($this->description . " going down");
+    }
+
+    public function __toString() {
+        return $this->description;
+    }
 }
 ?>

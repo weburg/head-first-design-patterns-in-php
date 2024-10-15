@@ -1,116 +1,116 @@
 <?php
 class GumballMachine {
-	/**
-	 * @var State
-	 */
-	protected $soldOutState;
-	/**
-	 * @var State
-	 */
-	protected $noQuarterState;
-	/**
-	 * @var State
-	 */
-	protected $hasQuarterState;
-	/**
-	 * @var State
-	 */
-	protected $soldState;
-	/**
-	 * @var State
-	 */
-	protected $winnerState;
-	
-	/**
-	 * @var State
-	 */
-	protected $state;
-	
-	protected $count = 0;
+    /**
+     * @var State
+     */
+    protected $soldOutState;
+    /**
+     * @var State
+     */
+    protected $noQuarterState;
+    /**
+     * @var State
+     */
+    protected $hasQuarterState;
+    /**
+     * @var State
+     */
+    protected $soldState;
+    /**
+     * @var State
+     */
+    protected $winnerState;
 
-	public function __construct($numberGumballs) {
-		$this->state = $this->soldOutState;
-		
-		$this->soldOutState = new SoldOutState($this);
-		$this->noQuarterState = new NoQuarterState($this);
-		$this->hasQuarterState = new HasQuarterState($this);
-		$this->soldState = new SoldState($this);
-		$this->winnerState = new WinnerState($this);
+    /**
+     * @var State
+     */
+    protected $state;
 
-		$this->count = $numberGumballs;
-		if ($numberGumballs > 0) {
-			$this->state = $this->noQuarterState;
-		}
-	}
+    protected $count = 0;
 
-	public function insertQuarter() {
-		$this->state->insertQuarter();
-	}
+    public function __construct($numberGumballs) {
+        $this->state = $this->soldOutState;
 
-	public function ejectQuarter() {
-		$this->state->ejectQuarter();
-	}
+        $this->soldOutState = new SoldOutState($this);
+        $this->noQuarterState = new NoQuarterState($this);
+        $this->hasQuarterState = new HasQuarterState($this);
+        $this->soldState = new SoldState($this);
+        $this->winnerState = new WinnerState($this);
 
-	public function turnCrank() {
-		$this->state->turnCrank();
-		$this->state->dispense();
-	}
+        $this->count = $numberGumballs;
+        if ($numberGumballs > 0) {
+            $this->state = $this->noQuarterState;
+        }
+    }
 
-	public function setState(State $state) {
-		$this->state = $state;
-	}
+    public function insertQuarter() {
+        $this->state->insertQuarter();
+    }
 
-	public function releaseBall() {
-		println("A gumball comes rolling out the slot...");
-		if ($this->count != 0) {
-			$this->count = $this->count - 1;
-		}
-	}
+    public function ejectQuarter() {
+        $this->state->ejectQuarter();
+    }
 
-	public function getCount() {
-		return $this->count;
-	}
+    public function turnCrank() {
+        $this->state->turnCrank();
+        $this->state->dispense();
+    }
 
-	public function refill($count) {
-		$this->count = $count;
-		$this->state = $this->noQuarterState;
-	}
+    public function setState(State $state) {
+        $this->state = $state;
+    }
 
-	public function getState() {
-		return $this->state;
-	}
+    public function releaseBall() {
+        println("A gumball comes rolling out the slot...");
+        if ($this->count != 0) {
+            $this->count = $this->count - 1;
+        }
+    }
 
-	public function getSoldOutState() {
-		return $this->soldOutState;
-	}
+    public function getCount() {
+        return $this->count;
+    }
 
-	public function getNoQuarterState() {
-		return $this->noQuarterState;
-	}
+    public function refill($count) {
+        $this->count = $count;
+        $this->state = $this->noQuarterState;
+    }
 
-	public function getHasQuarterState() {
-		return $this->hasQuarterState;
-	}
+    public function getState() {
+        return $this->state;
+    }
 
-	public function getSoldState() {
-		return $this->soldState;
-	}
+    public function getSoldOutState() {
+        return $this->soldOutState;
+    }
 
-	public function getWinnerState() {
-		return $this->winnerState;
-	}
+    public function getNoQuarterState() {
+        return $this->noQuarterState;
+    }
 
-	public function __toString() {
-		$result = "";
-		$result .= "\nMighty Gumball, Inc.";
-		$result .= "\nPHP-enabled Standing Gumball Model #2004";
-		$result .= "\nInventory: " . $this->count . " gumball";
-		if ($this->count != 1) {
-			$result .= "s";
-		}
-		$result .= "\n";
-		$result .= "Machine is " . $this->state . "\n";
-		return $result;
-	}
+    public function getHasQuarterState() {
+        return $this->hasQuarterState;
+    }
+
+    public function getSoldState() {
+        return $this->soldState;
+    }
+
+    public function getWinnerState() {
+        return $this->winnerState;
+    }
+
+    public function __toString() {
+        $result = "";
+        $result .= "\nMighty Gumball, Inc.";
+        $result .= "\nPHP-enabled Standing Gumball Model #2004";
+        $result .= "\nInventory: " . $this->count . " gumball";
+        if ($this->count != 1) {
+            $result .= "s";
+        }
+        $result .= "\n";
+        $result .= "Machine is " . $this->state . "\n";
+        return $result;
+    }
 }
 ?>

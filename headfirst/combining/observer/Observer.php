@@ -1,5 +1,5 @@
 <?php
 interface Observer {
-	public function update(QuackObservable $duck);
+    public function update(QuackObservable $duck);
 }
 ?>

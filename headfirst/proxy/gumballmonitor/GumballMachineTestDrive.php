@@ -1,57 +1,58 @@
 <?php
-class GumballMachineTestDrive {
-	public static function main(array $args = array()) {
-		$count = 0;
+class GumballMachineTestDrive
+{
+    public static function main(array $args = array()) {
+        $count = 0;
 
-		if (count($args) < 2) {
-			println("GumballMachine <name> <inventory>");
-			exit();
-		}
+        if (count($args) < 2) {
+            println("GumballMachine <name> <inventory>");
+            exit();
+        }
 
-		$count = $args[1];
+        $count = $args[1];
 
-		$gumballMachine = new GumballMachine($args[0], $count);
+        $gumballMachine = new GumballMachine($args[0], $count);
 
-		$monitor = new GumballMonitor($gumballMachine);
+        $monitor = new GumballMonitor($gumballMachine);
 
-		println($gumballMachine);
+        println($gumballMachine);
 
-		$gumballMachine->insertQuarter();
-		$gumballMachine->turnCrank();
-		$gumballMachine->insertQuarter();
-		$gumballMachine->turnCrank();
+        $gumballMachine->insertQuarter();
+        $gumballMachine->turnCrank();
+        $gumballMachine->insertQuarter();
+        $gumballMachine->turnCrank();
 
-		println($gumballMachine);
+        println($gumballMachine);
 
-		$gumballMachine->insertQuarter();
-		$gumballMachine->turnCrank();
-		$gumballMachine->insertQuarter();
-		$gumballMachine->turnCrank();
+        $gumballMachine->insertQuarter();
+        $gumballMachine->turnCrank();
+        $gumballMachine->insertQuarter();
+        $gumballMachine->turnCrank();
 
-		println($gumballMachine);
+        println($gumballMachine);
 
-		$gumballMachine->insertQuarter();
-		$gumballMachine->turnCrank();
-		$gumballMachine->insertQuarter();
-		$gumballMachine->turnCrank();
+        $gumballMachine->insertQuarter();
+        $gumballMachine->turnCrank();
+        $gumballMachine->insertQuarter();
+        $gumballMachine->turnCrank();
 
-		println($gumballMachine);
+        println($gumballMachine);
 
-		$gumballMachine->insertQuarter();
-		$gumballMachine->turnCrank();
-		$gumballMachine->insertQuarter();
-		$gumballMachine->turnCrank();
+        $gumballMachine->insertQuarter();
+        $gumballMachine->turnCrank();
+        $gumballMachine->insertQuarter();
+        $gumballMachine->turnCrank();
 
-		println($gumballMachine);
+        println($gumballMachine);
 
-		$gumballMachine->insertQuarter();
-		$gumballMachine->turnCrank();
-		$gumballMachine->insertQuarter();
-		$gumballMachine->turnCrank();
+        $gumballMachine->insertQuarter();
+        $gumballMachine->turnCrank();
+        $gumballMachine->insertQuarter();
+        $gumballMachine->turnCrank();
 
-		println($gumballMachine);
-		
-		$monitor->report();
-	}
+        println($gumballMachine);
+
+        $monitor->report();
+    }
 }
 ?>

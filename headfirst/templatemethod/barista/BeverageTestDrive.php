@@ -1,24 +1,24 @@
 <?php
 class BeverageTestDrive {
-	public static function main(array $args = array()) {
-		$tea = new Tea();
-		$coffee = new Coffee();
+    public static function main(array $args = array()) {
+        $tea = new Tea();
+        $coffee = new Coffee();
 
-		println("\nMaking tea...");
-		$tea->prepareRecipe();
+        println("\nMaking tea...");
+        $tea->prepareRecipe();
 
-		println("\nMaking coffee...");
-		$coffee->prepareRecipe();
+        println("\nMaking coffee...");
+        $coffee->prepareRecipe();
 
 
-		$teaHook = new TeaWithHook();
-		$coffeeHook = new CoffeeWithHook();
+        $teaHook = new TeaWithHook();
+        $coffeeHook = new CoffeeWithHook();
 
-		println("\nMaking tea...");
-		$teaHook->prepareRecipe();
+        println("\nMaking tea...");
+        $teaHook->prepareRecipe();
 
-		println("\nMaking coffee...");
-		$coffeeHook->prepareRecipe();
-	}
+        println("\nMaking coffee...");
+        $coffeeHook->prepareRecipe();
+    }
 }
 ?>

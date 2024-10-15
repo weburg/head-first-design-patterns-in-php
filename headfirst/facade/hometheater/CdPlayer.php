@@ -1,58 +1,58 @@
 <?php
 class CdPlayer {
-	protected $description;
-	protected $currentTrack;
-	/**
-	 * @var Amplifier
-	 */
-	protected $amplifier;
-	protected $title;
-	
-	public function __construct($description, Amplifier $amplifier) {
-		$this->description = $description;
-		$this->amplifier = $amplifier;
-	}
+    protected $description;
+    protected $currentTrack;
+    /**
+     * @var Amplifier
+     */
+    protected $amplifier;
+    protected $title;
 
-	public function on() {
-		println($this->description . " on");
-	}
+    public function __construct($description, Amplifier $amplifier) {
+        $this->description = $description;
+        $this->amplifier = $amplifier;
+    }
 
-	public function off() {
-		println($this->description . " off");
-	}
+    public function on() {
+        println($this->description . " on");
+    }
 
-	public function eject() {
-		$this->title = NULL;
-		println($this->description . " eject");
-	}
+    public function off() {
+        println($this->description . " off");
+    }
 
-	public function play($titleOrTrack) {
-		if (is_string($titleOrTrack)) {
-			$this->title = $titleOrTrack;
-			$this->currentTrack = 0;
-			println($this->description . " playing \"" . $this->title . "\"");
-		} else {
-			if ($this->title == NULL) {
-				println($this->description . " can't play track " . $this->currentTrack . 
-						", no cd inserted");
-			} else {
-				$this->currentTrack = $titleOrTrack;
-				println($this->description . " playing track " . $this->currentTrack);
-			}
-		}
-	}
+    public function eject() {
+        $this->title = NULL;
+        println($this->description . " eject");
+    }
 
-	public function stop() {
-		$this->currentTrack = 0;
-		println($this->description . " stopped");
-	}
+    public function play($titleOrTrack) {
+        if (is_string($titleOrTrack)) {
+            $this->title = $titleOrTrack;
+            $this->currentTrack = 0;
+            println($this->description . " playing \"" . $this->title . "\"");
+        } else {
+            if ($this->title == NULL) {
+                println($this->description . " can't play track " . $this->currentTrack .
+                    ", no cd inserted");
+            } else {
+                $this->currentTrack = $titleOrTrack;
+                println($this->description . " playing track " . $this->currentTrack);
+            }
+        }
+    }
 
-	public function pause() {
-		println($this->description . " paused \"" . $this->title . "\"");
-	}
+    public function stop() {
+        $this->currentTrack = 0;
+        println($this->description . " stopped");
+    }
 
-	public function __toString() {
-		return $this->description;
-	}
+    public function pause() {
+        println($this->description . " paused \"" . $this->title . "\"");
+    }
+
+    public function __toString() {
+        return $this->description;
+    }
 }
 ?>

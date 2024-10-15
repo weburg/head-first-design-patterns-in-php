@@ -1,5 +1,5 @@
 <?php
 interface QuackBehavior {
-	public function quack();
+    public function quack();
 }
 ?>

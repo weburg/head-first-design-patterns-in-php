@@ -1,12 +1,7 @@
-Head First Design Patterns in PHP
-=================================
+# Head First Design Patterns in PHP
 
-Version 2.0.0, released 9/10/2024
----------------------------------
-
-### Updates
-
-- Now supports PHP 8.
+## 2.0.1: 10/14/2024
+- Some formatting cleanup, minor fixes.
 
 By Wren Weburg <wren@weburg.com>  
 http://www.weburg.com/hfdp
@@ -51,7 +46,7 @@ If you have any questions or feedback, I'd love to hear from you!
 ### Requirements
 
 - PHP 5.2 or better for version 1.0.0, PHP 8 or better for version 2.0.0
-	- Sockets extension enabled for running Proxy Pattern
+    - Sockets extension enabled for running Proxy Pattern
 - Windows (tested with Server 2000, 10), Linux (tested with Ubuntu 8.10, 22.04), Mac OS X
   (tested with 10.5.7)
 - Web server to run MVC example (tested with Apache HTTP Server 2 and IIS 5)
@@ -181,7 +176,7 @@ directory or symlink to pull the public directory into an existing site.
   some intermediate supporting code was needed to mimic Java.
 - PHP has a build in Iterator interface, but it's not the same interface as
   Java so I renamed the interface to MyIterator for demo purposes.
-- In the future, this example may be rewritten to use PHP's native Iterator.
+- This example could likely be rewritten to use PHP's native Iterator.
 
 #### Compound Patterns - Chapter 12
 
@@ -248,9 +243,7 @@ directory or symlink to pull the public directory into an existing site.
 
 ##### Weather
 
-- PHP seems to have own Subject and Observer classes, renamed them to avoid
-  any collisions. In the future, with PHP 5.3, namespaces can be used to
-  keep them separate.
+- PHP has its own SplSubject and SplObserver interfaces, unused here though.
 - Had to rewrite list of observers array usage; PHP arrays work different
   than Java's.
 - Can also use "pull" method instead of "push" to control data flow more
@@ -318,7 +311,7 @@ directory or symlink to pull the public directory into an existing site.
 ##### Frame
 
 - PHP doesn't support Swing / AWT, though it does have GTK. Perhaps this
-  can be ported in the future with a little effort!
+  can be ported by someone with enough motivation!
 
 ##### Simple Barista
 
@@ -343,5 +336,8 @@ want to hear from you and/or receive a credit somewhere is about all. Thanks!
 
 ### Prior Versions
 
-1.0.0 : 7/28/2009
-	- Initial release
+2.0.0: 9/10/2024
+  - Now supports PHP 8.
+
+1.0.0: 7/28/2009
+  - Initial release

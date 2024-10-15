@@ -1,53 +1,53 @@
 <?php
 class DuckSimulator {
-	public static function main(array $args = array()) {
-		$simulator = new DuckSimulator();
-		$duckFactory = new CountingDuckFactory();
+    public static function main(array $args = array()) {
+        $simulator = new DuckSimulator();
+        $duckFactory = new CountingDuckFactory();
 
-		$simulator->simulate($duckFactory);
-	}
+        $simulator->simulate($duckFactory);
+    }
 
-	protected function simulate($duckFactoryOrQuackable) {
-		if ($duckFactoryOrQuackable instanceof AbstractDuckFactory) {
-			$redheadDuck = $duckFactoryOrQuackable->createRedheadDuck();
-			$duckCall = $duckFactoryOrQuackable->createDuckCall();
-			$rubberDuck = $duckFactoryOrQuackable->createRubberDuck();
-			$gooseDuck = new GooseAdapter(new Goose());
+    protected function simulate($duckFactoryOrQuackable) {
+        if ($duckFactoryOrQuackable instanceof AbstractDuckFactory) {
+            $redheadDuck = $duckFactoryOrQuackable->createRedheadDuck();
+            $duckCall = $duckFactoryOrQuackable->createDuckCall();
+            $rubberDuck = $duckFactoryOrQuackable->createRubberDuck();
+            $gooseDuck = new GooseAdapter(new Goose());
 
-			$flockOfDucks = new Flock();
+            $flockOfDucks = new Flock();
 
-			$flockOfDucks->add($redheadDuck);
-			$flockOfDucks->add($duckCall);
-			$flockOfDucks->add($rubberDuck);
-			$flockOfDucks->add($gooseDuck);
+            $flockOfDucks->add($redheadDuck);
+            $flockOfDucks->add($duckCall);
+            $flockOfDucks->add($rubberDuck);
+            $flockOfDucks->add($gooseDuck);
 
-			$flockOfMallards = new Flock();
+            $flockOfMallards = new Flock();
 
-			$mallardOne = $duckFactoryOrQuackable->createMallardDuck();
-			$mallardTwo = $duckFactoryOrQuackable->createMallardDuck();
-			$mallardThree = $duckFactoryOrQuackable->createMallardDuck();
-			$mallardFour = $duckFactoryOrQuackable->createMallardDuck();
+            $mallardOne = $duckFactoryOrQuackable->createMallardDuck();
+            $mallardTwo = $duckFactoryOrQuackable->createMallardDuck();
+            $mallardThree = $duckFactoryOrQuackable->createMallardDuck();
+            $mallardFour = $duckFactoryOrQuackable->createMallardDuck();
 
-			$flockOfMallards->add($mallardOne);
-			$flockOfMallards->add($mallardTwo);
-			$flockOfMallards->add($mallardThree);
-			$flockOfMallards->add($mallardFour);
+            $flockOfMallards->add($mallardOne);
+            $flockOfMallards->add($mallardTwo);
+            $flockOfMallards->add($mallardThree);
+            $flockOfMallards->add($mallardFour);
 
-			$flockOfDucks->add($flockOfMallards);
+            $flockOfDucks->add($flockOfMallards);
 
-			println("\nDuck Simulator: With Observer");
+            println("\nDuck Simulator: With Observer");
 
-			$quackologist = new Quackologist();
-			$flockOfDucks->registerObserver($quackologist);
+            $quackologist = new Quackologist();
+            $flockOfDucks->registerObserver($quackologist);
 
-			$this->simulate($flockOfDucks);
+            $this->simulate($flockOfDucks);
 
-			println("\nThe ducks quacked " . 
-					QuackCounter::getQuacks() . 
-					" times");
-		} else if ($duckFactoryOrQuackable instanceof Quackable) {
-			$duckFactoryOrQuackable->quack();
-		}
-	}
+            println("\nThe ducks quacked " .
+                    QuackCounter::getQuacks() .
+                    " times");
+        } else if ($duckFactoryOrQuackable instanceof Quackable) {
+            $duckFactoryOrQuackable->quack();
+        }
+    }
 }
 ?>

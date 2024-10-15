@@ -1,5 +1,5 @@
 <?php
 interface Quackable extends QuackObservable {
-	public function quack();
+    public function quack();
 }
 ?>

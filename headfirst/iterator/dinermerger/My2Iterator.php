@@ -1,6 +1,6 @@
 <?php
 interface My2Iterator {
-	public function hasNext();
-	public function next();
+    public function hasNext();
+    public function next();
 }
 ?>

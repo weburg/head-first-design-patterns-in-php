@@ -1,6 +1,7 @@
 <?php
 interface Duck {
-	public function quack();
-	public function fly();
+    public function quack();
+
+    public function fly();
 }
 ?>

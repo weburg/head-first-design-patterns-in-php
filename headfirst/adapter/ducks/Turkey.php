@@ -1,6 +1,6 @@
 <?php
 interface Turkey {
-	public function gobble();
-	public function fly();
+    public function gobble();
+    public function fly();
 }
 ?>

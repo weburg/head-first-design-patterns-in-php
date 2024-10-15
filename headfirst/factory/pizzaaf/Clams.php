@@ -1,5 +1,5 @@
 <?php
 interface Clams {
-	public function __toString();
+    public function __toString();
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 class Goose {
-	public function honk() {
-		println("Honk");
-	}
+    public function honk() {
+        println("Honk");
+    }
 }
 ?>

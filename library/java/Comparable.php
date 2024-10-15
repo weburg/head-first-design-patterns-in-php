@@ -3,6 +3,6 @@
  * Mimic Java's Comparable interface
  */
 interface Comparable {
-	public function compareTo(Comparable $object);
+    public function compareTo(Comparable $object);
 }
 ?>

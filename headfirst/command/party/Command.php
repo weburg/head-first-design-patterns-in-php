@@ -1,6 +1,7 @@
 <?php
 interface Command {
-	public function execute();
-	public function undo();
+    public function execute();
+
+    public function undo();
 }
 ?>

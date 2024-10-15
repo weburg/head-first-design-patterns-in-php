@@ -1,5 +1,5 @@
 <?php
 interface FlyBehavior {
-	public function fly();
+    public function fly();
 }
 ?>

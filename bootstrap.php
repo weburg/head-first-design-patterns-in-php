@@ -14,7 +14,7 @@ INI_Set("include_path", INI_Get("include_path") . PATH_SEPARATOR . dirname(__FIL
  * that was called and we only want arguments, in order to mimic Java's args.
  */
 if (isset($_SERVER["argv"])) {
-	array_shift($_SERVER["argv"]);
+    array_shift($_SERVER["argv"]);
 }
 
 /*
@@ -22,13 +22,14 @@ if (isset($_SERVER["argv"])) {
  * the same directory
  */
 spl_autoload_register(function ($className) {
-    require_once $className . ".php";
+    $classParts = explode('\\', $className);
+    require_once end($classParts) . ".php";
 });
 
 /*
  * Mimic Java's println()
  */
 function println($string_message = "") {
-	return print $string_message . "\n";
+    return print $string_message . "\n";
 }
 ?>

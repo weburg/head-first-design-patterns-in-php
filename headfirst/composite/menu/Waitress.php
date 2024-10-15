@@ -1,15 +1,15 @@
 <?php
 class Waitress {
-	/**
-	 * @var MenuComponent
-	 */
-	protected $allMenus;
+    /**
+     * @var MenuComponent
+     */
+    protected $allMenus;
 
-	public function __construct(MenuComponent $allMenus) {
-		$this->allMenus = $allMenus;
-	}
+    public function __construct(MenuComponent $allMenus) {
+        $this->allMenus = $allMenus;
+    }
 
-	public function printMenu() {
-		$this->allMenus->myPrint();
-	}
+    public function printMenu() {
+        $this->allMenus->myPrint();
+    }
 }

@@ -1,5 +1,5 @@
 <?php
 interface Cheese {
-	public function __toString();
+    public function __toString();
 }
 ?>

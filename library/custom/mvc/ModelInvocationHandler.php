@@ -7,19 +7,19 @@
  * from hitting the backend of the application.
  */
 class ModelInvocationHandler {
-	/**
-	 * @var object
-	 */
-	protected $object;
+    /**
+     * @var object
+     */
+    protected $object;
 
-	public function __construct($object) {
-		$this->object = $object;
-	}
+    public function __construct($object) {
+        $this->object = $object;
+    }
 
-	public function __get($name) {
-		$methodName = "get" . $name;
-		$reflectionMethod = new ReflectionMethod($this->object, $methodName);
-		return $reflectionMethod->invoke($this->object, array());
-	}
+    public function __get($name) {
+        $methodName = "get" . $name;
+        $reflectionMethod = new ReflectionMethod($this->object, $methodName);
+        return $reflectionMethod->invoke($this->object, array());
+    }
 }
 ?>

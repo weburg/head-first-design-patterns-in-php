@@ -1,5 +1,5 @@
 <?php
 interface Sauce {
-	public function __toString();
+    public function __toString();
 }
 ?>
