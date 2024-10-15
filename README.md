@@ -1,13 +1,6 @@
 # Head First Design Patterns in PHP
 
-## Table of Contents
-
-* Introduction
-* Requirements
-* Convention
-* How to Run the Command Line Examples
-* How to Run the MVC Example
-* Special Notes by Pattern
+## A port of the Java examples from Head First Design Patterns
 
 ### Introduction
 
