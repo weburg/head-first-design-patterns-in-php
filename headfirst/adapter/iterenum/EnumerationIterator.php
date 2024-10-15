@@ -1,14 +1,14 @@
 <?php
-require_once "java/MyEnumeration.php";
-require_once "java/MyIterator.php";
+require_once "java/Enumeration.php";
+require_once "java/Iterator.php";
 
-class EnumerationIterator implements MyIterator {
+class EnumerationIterator implements java\Iterator {
     /**
-     * @var MyEnumeration
+     * @var Enumeration
      */
     protected $enumeration;
 
-    public function __construct(MyEnumeration $enumeration) {
+    public function __construct(Enumeration $enumeration) {
         $this->enumeration = $enumeration;
     }
 

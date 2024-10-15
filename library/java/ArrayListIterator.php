@@ -1,8 +1,8 @@
 <?php
 require_once "java/ArrayList.php";
-require_once "java/MyIterator.php";
+require_once "java/Iterator.php";
 
-class ArrayListIterator implements MyIterator {
+class ArrayListIterator implements java\Iterator {
     /**
      * @var ArrayList
      */

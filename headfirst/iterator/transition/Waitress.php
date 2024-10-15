@@ -1,6 +1,6 @@
 <?php
 require_once "java/ArrayList.php";
-require_once "java/MyIterator.php";
+require_once "java/Iterator.php";
 
 class Waitress {
     /**
@@ -12,7 +12,7 @@ class Waitress {
         $this->menus = $menus;
     }
 
-    public function printMenu(MyIterator $iterator = NULL) {
+    public function printMenu(java\Iterator $iterator = NULL) {
         if ($iterator == NULL) {
             $menuIterator = $this->menus->iterator();
             while($menuIterator->hasNext()) {

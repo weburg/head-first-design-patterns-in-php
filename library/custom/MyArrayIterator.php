@@ -1,10 +1,10 @@
 <?php
-require_once "java/MyIterator.php";
+require_once "java/Iterator.php";
 
 /*
  * Simple array iterator
  */
-class MyArrayIterator implements MyIterator {
+class MyArrayIterator implements java\Iterator {
     private $arrayElements = array();
     private $index = 0;
     private $nextCalled = FALSE;
@@ -22,7 +22,7 @@ class MyArrayIterator implements MyIterator {
             $this->nextCalled = TRUE;
             return $this->arrayElements[$this->index++];
         } else {
-            throw new OutOfBoundsException("MyIterator out of bounds");
+            throw new OutOfBoundsException("Iterator out of bounds");
         }
     }
 

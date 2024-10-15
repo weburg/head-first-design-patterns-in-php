@@ -2,7 +2,10 @@
 /*
  * Mimic Java's Iterator
  */
-interface MyIterator {
+
+namespace java;
+
+interface Iterator {
     public function hasNext();
 
     public function next();

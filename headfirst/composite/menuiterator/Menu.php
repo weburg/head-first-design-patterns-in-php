@@ -1,6 +1,6 @@
 <?php
 require_once "java/ArrayList.php";
-require_once "java/MyIterator.php";
+require_once "java/Iterator.php";
 
 class Menu extends MenuComponent {
     /**
@@ -16,7 +16,7 @@ class Menu extends MenuComponent {
      */
     protected $description;
     /**
-     * @var MyIterator
+     * @var java\Iterator
      */
     protected $iterator = NULL;
 

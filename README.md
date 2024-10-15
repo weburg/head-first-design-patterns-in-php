@@ -160,7 +160,7 @@ directory or symlink to pull the public directory into an existing site.
   interfaces and implementers either don't exist or don't map to Java, so
   some intermediate supporting code was needed to mimic Java.
 - PHP has a build in Iterator interface, but it's not the same interface as
-  Java so I renamed the interface to MyIterator for demo purposes.
+  Java so I renamed the interface to java\Iterator for demo purposes.
 - This example could likely be rewritten to use PHP's native Iterator.
 
 #### Compound Patterns - Chapter 12

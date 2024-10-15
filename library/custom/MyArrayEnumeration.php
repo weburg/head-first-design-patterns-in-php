@@ -1,10 +1,10 @@
 <?php
-require_once "java/MyEnumeration.php";
+require_once "java/Enumeration.php";
 
 /*
  * Simple enumeration iterator
  */
-class MyArrayEnumeration implements MyEnumeration {
+class MyArrayEnumeration implements Enumeration {
     private $arrayElements = array();
     private $index = 0;
 

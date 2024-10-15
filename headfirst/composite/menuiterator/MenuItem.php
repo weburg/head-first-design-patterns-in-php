@@ -1,6 +1,6 @@
 <?php
 require_once "java/ArrayList.php";
-require_once "java/MyIterator.php";
+require_once "java/Iterator.php";
 
 class MenuItem extends MenuComponent {
     protected $name;

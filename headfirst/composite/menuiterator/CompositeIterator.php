@@ -1,13 +1,13 @@
 <?php
-require_once "java/MyIterator.php";
+require_once "java/Iterator.php";
 
-class CompositeIterator implements MyIterator {
+class CompositeIterator implements java\Iterator {
     /**
      * @var array
      */
     protected $stack = array();
 
-    public function __construct(MyIterator $iterator) {
+    public function __construct(java\Iterator $iterator) {
         array_push($this->stack, $iterator);
     }
 

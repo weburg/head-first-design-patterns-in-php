@@ -1,5 +1,5 @@
 <?php
-require_once "java/MyIterator.php";
+require_once "java/Iterator.php";
 
 class Waitress {
     /**
@@ -16,7 +16,7 @@ class Waitress {
         $this->dinerMenu = $dinerMenu;
     }
 
-    public function printMenu(MyIterator $iterator = NULL) {
+    public function printMenu(java\Iterator $iterator = NULL) {
         if ($iterator == NULL) {
             $pancakeIterator = $this->pancakeHouseMenu->createIterator();
             $dinerIterator = $this->dinerMenu->createIterator();
@@ -35,7 +35,7 @@ class Waitress {
         }
     }
 
-    public function printVegetarianMenu(MyIterator $iterator = NULL) {
+    public function printVegetarianMenu(java\Iterator $iterator = NULL) {
         if ($iterator == NULL) {
             println("\nVEGETARIAN MENU\n----\nBREAKFAST");
             $this->printVegetarianMenu($this->pancakeHouseMenu->createIterator());
@@ -65,7 +65,7 @@ class Waitress {
         return FALSE;
     }
 
-    private function isVegetarian($name, MyIterator $iterator) {
+    private function isVegetarian($name, java\Iterator $iterator) {
         while ($iterator->hasNext()) {
             $menuItem = $iterator->next();
             if ($menuItem->getName() == $name) {

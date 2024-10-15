@@ -1,7 +1,7 @@
 <?php
-require_once "java/MyIterator.php";
+require_once "java/Iterator.php";
 
-class DinerMenuIterator implements MyIterator {
+class DinerMenuIterator implements java\Iterator {
     /**
      * @var array
      */

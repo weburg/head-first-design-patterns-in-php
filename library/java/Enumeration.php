@@ -2,7 +2,7 @@
 /*
  * Mimic Java's Enumeration
  */
-interface MyEnumeration {
+interface Enumeration {
     public function hasMoreElements();
 
     public function nextElement();
