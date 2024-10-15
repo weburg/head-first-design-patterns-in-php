@@ -1,12 +1,6 @@
 # Head First Design Patterns in PHP
 
-## 2.0.1: 10/14/2024
-- Some formatting cleanup, minor fixes.
-
-By Wren Weburg <wren@weburg.com>  
-http://www.weburg.com/hfdp
-
-Table of Contents
+## Table of Contents
 
 * Introduction
 * Requirements
@@ -327,17 +321,3 @@ directory or symlink to pull the public directory into an existing site.
   that works great with the Comparable interface. The custom function that
   gets passed into usort delegates its sorting to the compareTo() method
   of the two argument objects passed in, making for an elegant, native port.
-
-### License
-
-All code is in the public domain for your use / education / enjoyment. Though,
-if you use any of the code in your projects or want to redistribute it, I'd just
-want to hear from you and/or receive a credit somewhere is about all. Thanks!
-
-### Prior Versions
-
-2.0.0: 9/10/2024
-  - Now supports PHP 8.
-
-1.0.0: 7/28/2009
-  - Initial release
