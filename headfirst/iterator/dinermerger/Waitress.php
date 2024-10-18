@@ -14,7 +14,7 @@ class Waitress {
         $this->dinerMenu = $dinerMenu;
     }
 
-    public function printMenu(com\weburg\Iterator $iterator = NULL) {
+    public function printMenu(weburg\Iterator $iterator = NULL) {
         if ($iterator == NULL) {
             $pancakeIterator = $this->pancakeHouseMenu->createIterator();
             $dinerIterator = $this->dinerMenu->createIterator();

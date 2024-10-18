@@ -1,5 +1,5 @@
 <?php
-class AlternatingDinerMenuIterator implements com\weburg\Iterator {
+class AlternatingDinerMenuIterator implements weburg\Iterator {
     /**
      * @var array of MenuItem
      */

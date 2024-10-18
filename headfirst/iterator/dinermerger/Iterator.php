@@ -1,5 +1,5 @@
 <?php
-namespace com\weburg;
+namespace weburg;
 
 interface Iterator {
     public function hasNext();
