@@ -5,7 +5,7 @@ class DuckSimulator {
         $simulator->simulate();
     }
 
-    protected function simulate(Quackable $duck = NULL) {
+    protected function simulate(?Quackable $duck = NULL) {
         if ($duck == NULL) {
             $mallardDuck = new MallardDuck();
             $redheadDuck = new RedheadDuck();

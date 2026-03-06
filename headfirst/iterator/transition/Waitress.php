@@ -12,7 +12,7 @@ class Waitress {
         $this->menus = $menus;
     }
 
-    public function printMenu(java\Iterator $iterator = NULL) {
+    public function printMenu(?java\Iterator $iterator = NULL) {
         if ($iterator == NULL) {
             $menuIterator = $this->menus->iterator();
             while($menuIterator->hasNext()) {

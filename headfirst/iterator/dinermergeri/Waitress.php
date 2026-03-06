@@ -16,7 +16,7 @@ class Waitress {
         $this->dinerMenu = $dinerMenu;
     }
 
-    public function printMenu(java\Iterator $iterator = NULL) {
+    public function printMenu(?java\Iterator $iterator = NULL) {
         if ($iterator == NULL) {
             $pancakeIterator = $this->pancakeHouseMenu->createIterator();
             $dinerIterator = $this->dinerMenu->createIterator();
@@ -35,7 +35,7 @@ class Waitress {
         }
     }
 
-    public function printVegetarianMenu(java\Iterator $iterator = NULL) {
+    public function printVegetarianMenu(?java\Iterator $iterator = NULL) {
         if ($iterator == NULL) {
             println("\nVEGETARIAN MENU\n----\nBREAKFAST");
             $this->printVegetarianMenu($this->pancakeHouseMenu->createIterator());
